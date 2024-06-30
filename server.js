@@ -46,5 +46,5 @@ app.use("/api/payouts", PayoutRoute);
 app.use("/api/driver", DriverRoute);
 app.use("/api/rating", RatingRoute);
 app.use("/api/cart", CartRoute);
-
+app.use("/api/feedback", FeedBackRoute);
 app.listen(process.env.PORT || 6013, () => console.log(`Foodly Backend is running on ${process.env.PORT}!`));
