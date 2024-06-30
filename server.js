@@ -47,4 +47,15 @@ app.use("/api/driver", DriverRoute);
 app.use("/api/rating", RatingRoute);
 app.use("/api/cart", CartRoute);
 app.use("/api/feedback", FeedBackRoute);
+app.use((err, req, res, next) => {
+    console.error(err.stack); // Log the error stack for debugging
+
+    // Respond with a 500 Internal Server Error status and JSON error message
+    res.status(500).json({
+        error: {
+            message: 'Internal Server Error'
+        }
+    });
+});
+
 app.listen(process.env.PORT || 6013, () => console.log(`Foodly Backend is running on ${process.env.PORT}!`));
