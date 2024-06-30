@@ -28,10 +28,10 @@ mongoose.connect(process.env.MONGOURL)
 
 // const otp = generateOtp();
 // console.log(otp);
-// sendEmail('ayeshalatif55566@gmail.com', otp);
-sendVerificationEmail('muhmadraza196@gmail.com', 'Test User')
-    .then(() => console.log("Test email sent"))
-    .catch((error) => console.log("Test email sending failed: ", error));
+sendEmail('ayeshalatif55566@gmail.com', otp);
+// sendVerificationEmail('muhmadraza196@gmail.com', 'Test User')
+//     .then(() => console.log("Test email sent"))
+//     .catch((error) => console.log("Test email sending failed: ", error));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
