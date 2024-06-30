@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv').config();
-
+console.log('AUTH_EMAIL:', process.env.AUTH_EMAIL);
+console.log('AUTH_PASSWORD:', process.env.AUTH_PASSWORD);
 async function sendEmail(UserEmail, otp) {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
